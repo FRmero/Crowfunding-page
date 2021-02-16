@@ -1,0 +1,22 @@
+{
+  "name": "crowfunding-page",
+  "version": "1.0.0",
+  "description": "Frontendmentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "Web",
+    "Design"
+  ],
+  "author": "Facundo Romero",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0"
+  }
+}

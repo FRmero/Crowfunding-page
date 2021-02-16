@@ -1,0 +1,59 @@
+.header {
+    background-image: url(/src/images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    @include medium {
+        background-image: url(/src/images/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: $separation / 3;
+    }
+    &__nav--hamburger {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__nav--items {
+        display: none;
+        width: 100%;
+
+        &.show {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+        @include medium {
+            &__content {
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__nav--hamburger {
+                display: none;
+            }
+            &__nav {
+                display: flex;
+            }
+             ul {
+                display: flex;
+                gap: $separation / 4;
+                a{
+                    color: $white;
+                    font-weight: $regular;
+                    &:hover {
+                        color: darken($white, 15%);
+                    }
+                }
+            }
+        }
+}
