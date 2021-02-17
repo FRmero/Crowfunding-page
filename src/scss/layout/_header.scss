@@ -34,19 +34,33 @@
     }
     &__menu {
         display: none;
+        a {
+            color: $black;
+            &:hover {
+                color: lighten($black, 10%);
+            }
+        }
+        li {
+            border-bottom: 1px solid $black;
+            &:last-of-type {
+                border: none;
+            }
+        }
         &.open {
             position: absolute;
             top: $separation * 1.5;
-            left: 50%;
-            right: 50%;
+            width: 90%;
             display: flex;
             flex-direction: column;
             gap: $separation / 4;
-            background-color: black;
+            padding: $separation / 2;
+            text-align: center;
+            background-color: $white;
+            border-radius: 1rem;
         }
         @include medium {
             display: flex;
-            gap: $separation / 5;
+            gap: $separation / 5.5;
         }
     }
 
