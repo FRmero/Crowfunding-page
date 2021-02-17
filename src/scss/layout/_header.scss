@@ -13,7 +13,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: $separation / 5;
+        padding: $separation / 3;
     }
     &__mobile {
         background-image: url(/src/images/icon-hamburger.svg);
@@ -55,12 +55,22 @@
             gap: $separation / 4;
             padding: $separation / 2;
             text-align: center;
+            font-size: 2rem;
             background-color: $white;
             border-radius: 1rem;
         }
         @include medium {
             display: flex;
             gap: $separation / 5.5;
+            li {
+                border: none;
+            }
+            a {
+               color: $white;
+               &:hover {
+                   color: darken($white, 5%);
+               }
+            }
         }
     }
 

@@ -9,6 +9,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: $primaryFont;
+    background-color: darken($white, 5%);
 }
 
 .container {
