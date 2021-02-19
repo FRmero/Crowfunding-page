@@ -1,0 +1,28 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: $white;
+    border-radius: 1rem;
+    padding: $separation;
+}
+
+.btn {
+    padding: 1.5rem $separation + 1;
+    color: $white;
+    background-color: $cyan;
+    border-radius: 3rem; 
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+        background-color: $darkCyan;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,6 +1,54 @@
 .intro {
-    position: absolute;
-    background-color: $white;
-    border-radius: 1rem;
-    padding: $separation;
+    display: flex;
+    flex-direction: column;
+    margin: -4rem auto 2rem auto;
+    z-index: 5;
+
+    &__logo {
+        position: absolute;
+        top: 26rem;
+        z-index: 10;
+    }
+    
+    &__text {
+        text-align: center;
+
+        &--title {
+            margin-bottom: 2rem;
+        }
+
+        &--description {
+            color: $darkGray;
+            margin-bottom: 3rem;
+        }
+
+        &__cta {
+            display: flex;
+            justify-content: space-between;
+
+            &--btn {
+                font-weight: $bold;
+            }
+
+            &--bookmark {
+                display: flex;
+                justify-content: space-between;
+                font-weight: $bold;
+                background-color: $lightGray;
+                border-radius: 2rem;
+                cursor: pointer;
+                
+                p {
+                    display: none;
+                    @include medium {
+                        display: flex;
+                    }
+                }
+                &:hover {
+                    color: $darkGray; 
+                }
+            }
+        }
+    }
+
 }
