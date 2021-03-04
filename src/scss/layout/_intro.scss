@@ -7,7 +7,14 @@
     &__logo {
         position: absolute;
         top: 26rem;
-        z-index: 10;
+        right: 45vw;
+        left: 45vw;
+        @include medium {
+            right: 50vw;
+            left: 50vw;
+        }
+        
+
     }
     
     &__text {
@@ -42,6 +49,7 @@
                     display: none;
                     @include medium {
                         display: flex;
+                        padding: 0 .5rem 0 .5rem;
                     }
                 }
                 &:hover {

@@ -388,13 +388,17 @@ h3 {
 
 .center {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+}
+
+.center-card {
+  flex-direction: column;
 }
 
 .card {
   background-color: white;
   border-radius: 1rem;
+  border: 1px solid #e3e3e3;
   padding: 5rem;
 }
 
@@ -414,6 +418,16 @@ h3 {
 
 .btn:focus {
   outline: none;
+}
+
+.btn__disabled {
+  background-color: #7a7a7a;
+  color: white;
+}
+
+.btn__disabled:hover {
+  background-color: #7a7a7a;
+  cursor: auto;
 }
 
 .header {
@@ -519,7 +533,15 @@ h3 {
 .intro__logo {
   position: absolute;
   top: 26rem;
-  z-index: 10;
+  right: 45vw;
+  left: 45vw;
+}
+
+@media (min-width: 768px) {
+  .intro__logo {
+    right: 50vw;
+    left: 50vw;
+  }
 }
 
 .intro__text {
@@ -560,9 +582,93 @@ h3 {
 @media (min-width: 768px) {
   .intro__text__cta--bookmark p {
     display: flex;
+    padding: 0 .5rem 0 .5rem;
   }
 }
 
 .intro__text__cta--bookmark:hover {
   color: #7a7a7a;
+}
+
+.goal {
+  margin-bottom: 2rem;
+}
+
+.goal__container {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .goal__container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.goal__items {
+  padding: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.goal__items:last-of-type {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .goal__items {
+    border-bottom: none;
+    border-right: 1px solid #f0f0f0;
+    margin-bottom: 2rem;
+  }
+}
+
+.goal__items p {
+  color: #7a7a7a;
+}
+
+.goal__bar {
+  height: 2rem;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 2rem;
+}
+
+.goal__bar--progress {
+  height: 100%;
+  width: 89%;
+  background-color: #3cb4ac;
+  border-radius: 2rem;
+}
+
+.main__about p {
+  color: #7a7a7a;
+}
+
+.main article {
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid #949494;
+  margin-bottom: 2rem;
+}
+
+.main__card--pledge {
+  color: #147b74;
+}
+
+.main__card--left {
+  color: #7a7a7a;
+}
+
+.main__card--left strong {
+  font-size: 4rem;
+  color: black;
+}
+
+.main__card--3 {
+  color: #adadad;
+}
+
+.main__card--3 strong {
+  color: rgba(0, 0, 0, 0.5);
 }

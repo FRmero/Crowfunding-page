@@ -1,0 +1,35 @@
+.main {
+
+    &__about {
+       p {
+           color: $darkGray;
+       }
+    }
+
+    article {
+        padding: $separation / 2;
+        border-radius: 1rem;
+        border: 1px solid lighten($darkGray, 10%);
+        margin-bottom: 2rem;
+    }
+
+    &__card {
+        &--pledge {
+            color: $darkCyan;
+        }
+        &--left {
+            color: $darkGray;
+            strong {
+                font-size: 4rem;
+                color: $black;
+            }
+        }
+
+        &--3 {
+            color: lighten($darkGray, 20%);
+            strong {
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+}

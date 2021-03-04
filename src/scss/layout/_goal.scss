@@ -1,0 +1,42 @@
+.goal {
+    margin-bottom: 2rem;
+    &__container {
+        flex-direction: column;
+        @include medium {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    &__items {
+        padding: 2rem;
+        border-bottom: 1px solid $lightGray;
+        &:last-of-type {
+            border: none;
+        }
+        @include medium {
+            border-bottom: none;
+            border-right: 1px solid $lightGray;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: $darkGray;
+        }
+    }
+
+    &__bar {
+        height: 2rem;
+        width: 100%;
+        background-color: $lightGray;
+        border-radius: 2rem;
+
+        &--progress {
+            height: 100%;
+            width: 89%;
+            background-color: $cyan;
+            border-radius: 2rem;
+        }
+    }
+}

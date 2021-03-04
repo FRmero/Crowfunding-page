@@ -1,12 +1,15 @@
 .center {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    &-card{
+        flex-direction: column;
+    }
 }
 
 .card {
     background-color: $white;
     border-radius: 1rem;
+    border: 1px solid darken($lightGray, 5%);
     padding: $separation;
 }
 
@@ -24,5 +27,13 @@
 
     &:focus {
         outline: none;
+    }
+    &__disabled {
+        background-color: $darkGray;
+        color: $white;
+        &:hover {
+            background-color: $darkGray;
+            cursor: auto;
+        }
     }
 }
